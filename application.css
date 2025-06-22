@@ -21,7 +21,7 @@ body {
 }
 
 #content {
-    width: 20%;
+    width: 100%;
     margin: auto;
     text-align: center;
     position: absolute;
@@ -62,4 +62,57 @@ a:visited {
 
 a:active {
 
+}
+
+#links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;   /* 👈 centers the cards horizontally */
+  gap: 24px;
+  flex-wrap: wrap;           /* 👈 allows wrapping on smaller screens */
+  padding: 24px 0;
+}
+
+.linkbutton {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  flex-shrink: 0;           /* Prevent card from shrinking */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 10px;
+}
+
+.linkbutton a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px;
+}
+
+.linkbutton img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.linkbutton h3 {
+  font-size: 1.2em;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.linkbutton p {
+  font-size: 0.95em;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.linkbutton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
